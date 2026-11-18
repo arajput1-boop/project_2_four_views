@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Dataset, Four Views: Prince George's County Food Safety Inspections</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js, for the Charts View. Pinned to one version so it can't change under you mid-semester. -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>One Dataset, Four Views</h1>
+            <p>150 recent food safety inspections from Prince George's County, Maryland, shown four different ways. Each view emphasises different parts of the information and serves a different person.</p>
+        </header>
+
+        <nav class="view-selector" aria-label="Choose a view">
+            <button class="view-button active" id="btn-cards" data-view="cards" aria-pressed="true">Card View</button>
+            <button class="view-button" id="btn-table" data-view="table" aria-pressed="false">Table View</button>
+            <button class="view-button" id="btn-categories" data-view="categories" aria-pressed="false">Category View</button>
+            <button class="view-button" id="btn-charts" data-view="charts" aria-pressed="false">Charts View</button>
+        </nav>
+
+        <main class="display-container">
+            <div id="data-display">
+                <div class="loading">Loading data...</div>
+            </div>
+        </main>
+
+        <section class="asst-box">
+            <h2>Which view is for whom?</h2>
+            <ul>
+                <li><strong>Card View:</strong> a diner browsing one place at a time</li>
+                <li><strong>Table View:</strong> a health inspector scanning and sorting exact values to plan visits</li>
+                <li><strong>Category View:</strong> a reporter comparing types of business, with the inspections tucked inside each group</li>
+                <li><strong>Charts View:</strong> anyone who wants the big picture at a glance, with a sentence describing every chart</li>
+            </ul>
+            <p class="source-note">Data: <a href="https://data.princegeorgescountymd.gov/" target="_blank" rel="noopener">Prince George's County Open Data</a>, food facility inspections. A "failed check" means one of the 15 food safety checks was marked "Out of Compliance".</p>
+        </section>
+    </div>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
